@@ -1,0 +1,40 @@
+This document is the illustration of the making of this project
+
+Table of Content
+1. Build flow
+2. Smoothly built parts of this project
+3. The Tricky ones 
+4. The difficulties faced during the project and how I handled them
+
+
+Chapter 1 - Build flow
+
+* Login and Signup page
+* frontend of Home page
+* Profile and Edit Profile page
+
+
+
+Chapter 2 -Smoothly built parts of this project
+
+* Login and Signup pages have become a cake, including frontend and the backend.
+* Home page desigining was also not that tough
+
+
+
+
+Chapter 3 - The Tricky ones
+* Profile page was tricky and had to think on how would I add the post and how can I save memory on storing pictures
+*
+
+
+Chapter 4 - The difficulties faced during the project and how I handled them
+
+* I used find instead of findOne and hence faced rendering issues in the frontend - I wasted almost half an hour finding the mistake. Ended up finding that find returns an array where as findOne returns an object.
+
+* Axios being asynchronous caused rendering issues - fixed it using a loading component called spinner till it gets the data from the backend
+
+* When you reload any page, the login details disappear -
+
+
+* Issues with the profile as the username was showing null at times - 
