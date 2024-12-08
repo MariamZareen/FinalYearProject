@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from '../img/logo.png'
+import logo from '../img/clogo.webp'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
@@ -23,7 +23,7 @@ export default function Signin() {
 
       const { username } = response.data;
       loginHandler(username);
-      navigate('/home');
+      navigate('/app/home');
     } catch (error) {
       setError(error.response.data)
       console.error('Could not send data via post:', error);
@@ -37,9 +37,9 @@ export default function Signin() {
            <div className='flex items-center flex-col w-[100%] justify-around h-[100%] border-slate-400 border-2 p-5 bg-slate-200'>
               <img src={logo} alt="logo" className='h-[100px]'/>
               <form action="/signup" className='flex flex-col w-[90%]'>
-                <input type="email" placeholder='Phone number, username or email' className='m-3 p-2 w-[100%]' name='email' onChange={(e)=>{setEmail(e.target.value)}} required/>
+                <input type="email" placeholder='USN' className='m-3 p-2 w-[100%]' name='email' onChange={(e)=>{setEmail(e.target.value)}} required/>
                 <input type="password" placeholder='Password' className='m-3 p-2 w-[100%]' name='password' onChange={(e)=>{setPassword(e.target.value)}} required/>
-                <input type="submit" className='text-white bg-blue-500 rounded m-3  w-[100%] h-[40px]' value='Log In' onClick={handleClick}/>
+                <input type="submit" className='text-white bg-blue-500 rounded m-3  w-[100%] h-[40px] cursor-pointer' value='Log In' onClick={handleClick}/>
               </form>
               <p className='m-3'>Forgot password?</p>
            </div>

@@ -20,8 +20,12 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    "email": {
+    "dept": {
         type: String,
+        required: true
+    },
+    "passout": {
+        type: Number,
         required: true
     },
     "password": {

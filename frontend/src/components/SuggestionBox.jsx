@@ -5,7 +5,7 @@ export default function SuggestionBox() {
     <div className='suggestions  w-[45%]'>
         <div className='flex m-10 p-5 font-semibold'>
                         <span class="material-symbols-outlined">person</span>
-                       mariamzareen
+                       1NT21CS102
                         <p className='text-blue-900 ml-auto '>Switch</p>
                      </div>
                      <p className="text-slate-600 font-semibold ml-10">Suggested for you</p>
@@ -13,25 +13,20 @@ export default function SuggestionBox() {
                            
                          <div className='flex mx-10 my-2 p-5 font-semibold'>
                            <span class="material-symbols-outlined">person</span>
-                            hrithikroshan
+                            1NT21CS087
                          <p className='text-blue-900 ml-auto '>follow</p>
                          </div>
                          <div className='flex mx-10 my-2 p-5 font-semibold'>
                            <span class="material-symbols-outlined">person</span>
-                            missmatured
+                            1NT21CS165
                          <p className='text-blue-900 ml-auto '>follow</p>
                          </div>
                          <div className='flex mx-10 my-2 p-5 font-semibold'>
                            <span class="material-symbols-outlined">person</span>
-                            priyankachoprajonas
+                            1NT22CS412
                          <p className='text-blue-900 ml-auto '>follow</p>
                          </div>
-                         <div className='flex mx-10 my-2 p-5 font-semibold'>
-                           <span class="material-symbols-outlined">person</span>
-                            nmitunofficail
-                         <p className='text-blue-900 ml-auto '>follow</p>
-                         </div>
-
+                        
 
                      </div>
     </div>

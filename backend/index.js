@@ -17,11 +17,11 @@ app.get('/',(req,res)=>{
 
 app.post('/', async (req, res) => {
     try {
-        const existingEmail = await userTable.findOne({ email: req.body.email });
+        // const existingEmail = await userTable.findOne({ email: req.body.email });
         const existingUser = await userTable.findOne({ username: req.body.email });
 
-        if (existingUser || existingEmail) {
-            const userToCheck = existingUser || existingEmail; 
+        if (existingUser) {
+            const userToCheck = existingUser ; 
 
             if (req.body.password === userToCheck.password) {
                 console.log("Login successful");
@@ -31,7 +31,7 @@ app.post('/', async (req, res) => {
                 res.status(401).json("Incorrect password");
             }
         } else {
-            console.log("User with this email/username not found");
+            console.log("User with this usn not found");
             res.status(404).json("User not found, please sign up");
         }
     } catch (error) {
@@ -43,13 +43,15 @@ app.post('/', async (req, res) => {
 
 app.post('/signup', async (req, res) => {
     try {
-      const { email, fullname, username, password } = req.body;
+      // const { email, fullname, username, password } = req.body;
+      const {dept,passout,fullname,username,password} =req.body;
       const findName = await userTable.find({ username: username });
       if (findName.length == 0) {
         const data = new userTable({
           fullname: fullname,
           username: username,
-          email: email,
+          dept:dept,
+          passout:passout,
           password: password,
         });
         await data.save();
