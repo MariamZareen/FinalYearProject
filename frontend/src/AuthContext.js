@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
     setUsername(userName);
   };
 
- console.log(username,"this is from autentication page")
+//  console.log(username,"this is from autentication page")
   return (
     <AuthContext.Provider value={{ username, loginHandler }}>
       {children}

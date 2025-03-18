@@ -3,6 +3,7 @@ const router=express.Router()
 const userTable = require('./mongo')
 
 
+
 router.get('/',(req,res)=>{
     res.send("hello")
 })

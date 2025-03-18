@@ -11,6 +11,7 @@ import Posts from './pages/Posts';
 import AddProjects from './pages/AddProjects';
 import AddResource from './pages/AddResource';
 import './index.css';
+import Spinner from './components/Spinner';
 
 function App() {
   return (
@@ -19,12 +20,15 @@ function App() {
         <Routes>
           <Route path="/" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/spinner" element={<Spinner />} />
+
           <Route path="/app" element={<Home />}>
            <Route path="home" element={<Posts />} />
             <Route path="announcements" element={<Announcements />} />
+            <Route path="editprofile" element={<EditProfile/>} />
             <Route path="addproject" element={<AddProjects />} />
             <Route path="addresource" element={<AddResource />} />
-            <Route path="profile/:id" element={<Profile />} />
+            <Route path="profile/:username?" element={<Profile />} />
             <Route path="editprofile" element={<EditProfile />} />
           </Route>
         </Routes>
